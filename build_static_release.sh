@@ -9,7 +9,7 @@ PLATFORM="arm64v8"
 RELEASE_NAME=tmate-$VERSION-static-linux-$PLATFORM
 echo "Building $RELEASE_NAME"
 
-docker build . --platform linux/arm64 --tag local-$PLATFORM/tmate-build --build-arg PLATFORM=$PLATFORM
+docker build . --tag local-$PLATFORM/tmate-build --build-arg PLATFORM=$PLATFORM
 
 mkdir -p releases
 cd releases
