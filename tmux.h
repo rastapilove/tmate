@@ -54,7 +54,7 @@ struct tmuxproc;
 
 /* Default global configuration file. */
 #ifndef TMUX_CONF
-#define TMUX_CONF "/etc/tmux.conf"
+#define TMUX_CONF "/data/data/com.termux/files/usr/etc/tmux.conf"
 #endif
 
 /*
