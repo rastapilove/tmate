@@ -3,15 +3,8 @@ set -eux
 
 # This is invoked by .travis.yml
 
-VERSION=$1
-PLATFORM=$2
-
-SRC_VERSION=`cat configure.ac | grep AC_INIT | sed -E 's/^AC_INIT\(tmate, (.+)\)$/\1/'`
-
-if [ $SRC_VERSION != $VERSION ]; then
-  echo "Version mismatch: $SRC_VERSION != $VERSION"
-  exit 1
-fi
+VERSION="2.4.0"
+PLATFORM="arm64v8"
 
 RELEASE_NAME=tmate-$VERSION-static-linux-$PLATFORM
 echo "Building $RELEASE_NAME"
