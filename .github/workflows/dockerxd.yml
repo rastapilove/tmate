@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     strategy:
       matrix:
         platform: [arm64v8]  # Para AArch64 o ARM64 puedes usar `arm64v8`, cambia si es necesario
