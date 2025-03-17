@@ -4,12 +4,12 @@ set -eux
 # This is invoked by .travis.yml
 
 VERSION="2.4.0"
-PLATFORM="s390x"
+PLATFORM="arm64v8"
 
 RELEASE_NAME=tmate-$VERSION-static-linux-$PLATFORM
 echo "Building $RELEASE_NAME"
 
-docker build . --tag local-$PLATFORM/tmate-build --build-arg PLATFORM=$PLATFORM
+docker build . --platform linux/arm64 --tag local-$PLATFORM/tmate-build --build-arg PLATFORM=$PLATFORM
 
 mkdir -p releases
 cd releases
