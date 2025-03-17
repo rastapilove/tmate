@@ -4,7 +4,7 @@ set -eux
 # This is invoked by .travis.yml
 
 VERSION="2.4.0"
-PLATFORM="i386"
+PLATFORM="arm32v7"
 
 RELEASE_NAME=tmate-$VERSION-static-linux-$PLATFORM
 echo "Building $RELEASE_NAME"
