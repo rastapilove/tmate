@@ -1,4 +1,4 @@
-ARG PLATFORM=arm64v8
+ARG PLATFORM=arm64
 FROM ${PLATFORM}/alpine:3.10 AS build
 
 WORKDIR /build
