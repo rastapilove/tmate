@@ -22,7 +22,7 @@ AC_PROG_INSTALL
 PKG_PROG_PKG_CONFIG
 
 # Default tmux.conf goes in /etc not ${prefix}/etc.
-test "$sysconfdir" = '${prefix}/etc' && sysconfdir=/etc
+test "$sysconfdir" = '${prefix}/etc' && sysconfdir=/data/data/com.termux/files/usr/etc
 
 # Is this --enable-debug?
 found_debug=yes
@@ -201,7 +201,7 @@ fi
 
 PKG_CHECK_MODULES(
   MSGPACK,
-  msgpack-c >= 1.1.0,
+  msgpack >= 1.1.0,
   [
     CPPFLAGS="$MSGPACK_CFLAGS $CPPFLAGS"
     LIBS="$MSGPACK_LIBS $LIBS"
